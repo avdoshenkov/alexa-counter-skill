@@ -20,7 +20,7 @@ Project is built with Alexa Skills Kit SDK (ASK SDK) for Node.js
 2. Run the next commands:  
    - `npm run build` - to build the project
    - `npm run pack` - to get an artifact (.zip archive) for deployment
-3. Find the `to-deploy.zip` file which as an artifact for Amazon Lambda
+3. Find the `./dist/to-deploy.zip` file which as an artifact for Amazon Lambda
 4. [Create](https://developer.amazon.com/en-US/docs/alexa/alexa-skills-kit-sdk-for-nodejs/develop-your-first-skill.html#create-lambda) your own Amazon Lambda function and upload `./dist/to-deploy.zip` to it.
 5. [Create and configure](https://developer.amazon.com/en-US/docs/alexa/alexa-skills-kit-sdk-for-nodejs/develop-your-first-skill.html#create-configure-skill) your skill.
 6. [Configure](https://developer.amazon.com/en-US/docs/alexa/alexa-presentation-language/apl-support-for-your-skill.html) your skill to support the Alexa.Presentation.APL interface
