@@ -1,0 +1,20 @@
+{
+  "name": "count-alexa-skill",
+  "version": "0.0.1",
+  "description": "Test skill for Alexa which can count via voice or through the touch screen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "pack": "zip -r ./dist/to-deploy.zip node_modules package.json screenAPL.json && cd ./dist && zip -rv to-deploy.zip index.js"
+  },
+  "keywords": [
+    "alexa"
+  ],
+  "author": "Dmitriy Avdoshenkov",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk": "^2.11.0",
+    "typescript": "^4.4.4"
+  }
+}
