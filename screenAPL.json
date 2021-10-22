@@ -1,0 +1,68 @@
+{
+    "type": "APL",
+    "version": "1.8",
+    "description": "Test skill for Alexa which can count via voice or through the touch screen",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.4.0"
+        }
+    ],
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "height": "100vh",
+                "width": "100vw",
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "backgroundImageSource": "https://images.unsplash.com/photo-1506574723610-7fe0f0c7f9ea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+                        "colorOverlay": true
+                    },
+                    {
+                        "type": "AlexaHeader",
+                        "headerBackButton": true,
+                        "headerBackButtonAccessibilityLabel": "back",
+                        "headerBackgroundColor": "transparent",
+                        "headerTitle": "Simple counter",
+                        "headerSubtitle": "You can ask me to count the numbers and magic will begin. Let's count!",
+                        "headerAttributionPrimacy": false,
+                        "headerDivider": false
+                    },
+                    {
+                        "type": "Text",
+                        "id": "counterComponent",
+                        "height": "25%",
+                        "text": "${payload.countData.properties.counterText}",
+                        "textAlign": "center",
+                        "textAlignVertical": "center",
+                        "paddingLeft": "@spacingSmall",
+                        "paddingRight": "@spacingSmall",
+                        "paddingTop": "20vh",
+                        "style": "textStyleBody",
+                        "fontSize": "120dp"
+                    },
+                    {
+                        "type": "AlexaButton",
+                        "alignSelf": "center",
+                        "id": "counterButton",
+                        "paddingTop": "20vh",
+                        "buttonText": "Count again",
+                        "primaryAction": [
+                            {
+                                "type": "SendEvent",
+                                "arguments": [
+                                    "user clicked the count button"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
