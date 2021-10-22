@@ -26,6 +26,8 @@ Project is built with Alexa Skills Kit SDK (ASK SDK) for Node.js
 6. [Configure](https://developer.amazon.com/en-US/docs/alexa/alexa-presentation-language/apl-support-for-your-skill.html) your skill to support the Alexa.Presentation.APL interface
 7. [Test](https://developer.amazon.com/en-US/docs/alexa/alexa-skills-kit-sdk-for-nodejs/develop-your-first-skill.html#test-skill) your skill.
 
+When you stop or cancel the skill usage, you will hear `Goodbye!` and counter will be reseted.
+
 
 ## Potential steps to improvements
 
